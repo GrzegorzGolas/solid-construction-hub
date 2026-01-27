@@ -23,16 +23,16 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:+48575857929"
-                className="btn-gold group"
+                className="btn-gold group whitespace-nowrap"
               >
-                <Phone className="w-5 h-5 transition-transform group-hover:scale-110" />
-                <span>575 857 929</span>
+                <Phone className="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" />
+                <span className="whitespace-nowrap">575&nbsp;857&nbsp;929</span>
               </a>
               <a
                 href="mailto:biuro@solidnewykonawstwo.pl"
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 font-semibold text-on-navy border-2 border-cream/30 rounded-lg hover:bg-cream/10 transition-all duration-300"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 flex-shrink-0" />
                 <span className="hidden sm:inline">biuro@solidnewykonawstwo.pl</span>
                 <span className="sm:hidden">Napisz do nas</span>
               </a>
@@ -45,20 +45,11 @@ const Hero = () => {
 
           {/* Right image */}
           <div className="relative animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
-              <img
-                src={heroHall}
-                alt="Konstrukcja hali stalowej - wizualizacja techniczna"
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
-              {/* Golden dimension indicators */}
-              <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-gold rounded flex items-center justify-center font-bold text-navy text-sm">
-                H
-              </div>
-              <div className="absolute bottom-2 right-1/4 w-8 h-8 bg-gold rounded flex items-center justify-center font-bold text-navy text-sm">
-                W
-              </div>
-            </div>
+            <img
+              src={heroHall}
+              alt="Konstrukcja hali stalowej w trakcie budowy"
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
           </div>
         </div>
       </div>
