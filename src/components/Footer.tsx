@@ -7,7 +7,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Solidne Wykonawstwo. Wszystkie prawa zastrzeżone.
           </p>
           <p>
-            HALE STALOWE • WIATY • CHŁODNIE • CARPORTY
+            Agile Solution Grzegorz Gołas • NIP: 814 142 12 80
           </p>
         </div>
       </div>
