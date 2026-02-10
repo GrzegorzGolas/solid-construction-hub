@@ -21,6 +21,7 @@ const Contact = () => {
             <a
               href="tel:+48575857929"
               className="flex items-center gap-4 group"
+              aria-label="Zadzwoń pod numer 575 857 929"
             >
               <div className="w-14 h-14 rounded-xl bg-navy flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Phone className="w-6 h-6 text-gold" />
@@ -36,6 +37,7 @@ const Contact = () => {
             <a
               href="mailto:biuro@solidnewykonawstwo.pl"
               className="flex items-center gap-4 group"
+              aria-label="Wyślij email na biuro@solidnewykonawstwo.pl"
             >
               <div className="w-14 h-14 rounded-xl bg-navy flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Mail className="w-6 h-6 text-gold" />
