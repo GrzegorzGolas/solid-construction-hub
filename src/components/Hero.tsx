@@ -32,6 +32,7 @@ const Hero = () => {
             <a
               href="tel:+48575857929"
               className="btn-gold group whitespace-nowrap text-xl"
+              aria-label="Zadzwoń pod numer 575 857 929"
             >
               <Phone className="w-6 h-6 flex-shrink-0 transition-transform group-hover:scale-110" />
               <span className="whitespace-nowrap">575&nbsp;857&nbsp;929</span>

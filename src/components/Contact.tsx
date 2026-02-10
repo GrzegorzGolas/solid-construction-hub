@@ -37,6 +37,7 @@ const Contact = () => {
             <a
               href="mailto:biuro@solidnewykonawstwo.pl"
               className="flex items-center gap-4 group"
+              aria-label="Wyślij email na biuro@solidnewykonawstwo.pl"
             >
               <div className="w-14 h-14 rounded-xl bg-navy flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Mail className="w-6 h-6 text-gold" />
