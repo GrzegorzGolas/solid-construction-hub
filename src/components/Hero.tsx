@@ -31,19 +31,19 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a
-              href="tel:+48575857929"
+              href={getPhoneHref()}
               className="btn-gold group whitespace-nowrap text-xl"
               aria-label="Zadzwoń pod numer 575 857 929"
             >
               <Phone className="w-6 h-6 flex-shrink-0 transition-transform group-hover:scale-110" />
-              <span className="whitespace-nowrap">575&nbsp;857&nbsp;929</span>
+              <span className="whitespace-nowrap">{getPhoneFormatted()}</span>
             </a>
             <a
-              href="mailto:biuro@solidnewykonawstwo.pl"
+              href={getEmailHref()}
               className="inline-flex items-center justify-center gap-2 px-6 py-4 font-semibold text-on-navy border-2 border-cream/30 rounded-lg hover:bg-cream/10 transition-all duration-300"
             >
               <Mail className="w-5 h-5 flex-shrink-0" />
-              <span className="hidden sm:inline">biuro@solidnewykonawstwo.pl</span>
+              <span className="hidden sm:inline">{getEmail()}</span>
               <span className="sm:hidden">Napisz do nas</span>
             </a>
           </div>

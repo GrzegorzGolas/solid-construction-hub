@@ -35,7 +35,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="mailto:biuro@solidnewykonawstwo.pl"
+              href={getEmailHref()}
               className="flex items-center gap-4 group"
               aria-label="Wyślij email na biuro@solidnewykonawstwo.pl"
             >
@@ -45,7 +45,7 @@ const Contact = () => {
               <div>
                 <p className="text-sm text-steel-light">E-mail</p>
                 <p className="text-lg font-semibold text-navy group-hover:text-gold transition-colors">
-                  biuro@solidnewykonawstwo.pl
+                  {getEmail()}
                 </p>
               </div>
             </a>
