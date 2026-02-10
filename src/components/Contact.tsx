@@ -19,7 +19,7 @@ const Contact = () => {
           {/* Contact info */}
           <div className="space-y-8">
             <a
-              href="tel:+48575857929"
+              href={getPhoneHref()}
               className="flex items-center gap-4 group"
               aria-label="Zadzwoń pod numer 575 857 929"
             >
@@ -29,7 +29,7 @@ const Contact = () => {
               <div>
                 <p className="text-sm text-steel-light">Telefon</p>
                 <p className="text-2xl font-bold text-navy font-heading group-hover:text-gold transition-colors">
-                  575 857 929
+                  {getPhoneFormatted()}
                 </p>
               </div>
             </a>
