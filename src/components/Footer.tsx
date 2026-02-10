@@ -7,7 +7,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Solidne Wykonawstwo. Wszystkie prawa zastrzeżone.
           </p>
           <p>
-            Agile Solution Grzegorz Gołas • NIP: 814 142 12 80
+            Agile Solution Grzegorz Golas • NIP: 814 142 12 80
           </p>
         </div>
       </div>
