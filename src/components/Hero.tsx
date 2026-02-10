@@ -1,5 +1,6 @@
 import { Phone, Mail } from "lucide-react";
 import heroHall from "@/assets/hero-hall.jpg";
+import { getPhoneFormatted, getPhoneHref, getEmail, getEmailHref } from "@/lib/contact";
 
 const Hero = () => {
   return (

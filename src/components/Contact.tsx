@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
-
+import { getPhoneFormatted, getPhoneHref, getEmail, getEmailHref } from "@/lib/contact";
 const Contact = () => {
   return (
     <section id="kontakt" className="section-padding bg-cream">

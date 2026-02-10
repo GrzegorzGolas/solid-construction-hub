@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import { getPhoneFormatted, getPhoneHref } from "@/lib/contact";
 
 const MobileCTA = () => {
   return (
