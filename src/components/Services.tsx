@@ -1,37 +1,24 @@
 import { Compass, Hammer, Eye } from "lucide-react";
-
-const services = [
-  {
-    icon: Compass,
-    title: "Projektowanie",
-    description:
-      "Kompleksowe projekty konstrukcji stalowych dostosowane do indywidualnych potrzeb klienta. Nowoczesne rozwiązania techniczne.",
-  },
-  {
-    icon: Hammer,
-    title: "Wykonawstwo",
-    description:
-      "Profesjonalna realizacja inwestycji od fundamentów po dach. Terminowość i najwyższa jakość wykonania.",
-  },
-  {
-    icon: Eye,
-    title: "Nadzór",
-    description:
-      "Pełny nadzór inwestorski i kontrola jakości na każdym etapie budowy. Bezpieczeństwo Twojej inwestycji.",
-  },
-];
+import { useLang } from "@/lib/i18n";
 
 const Services = () => {
+  const { t } = useLang();
+
+  const services = [
+    { icon: Compass, title: t.serviceDesignTitle, description: t.serviceDesignDesc },
+    { icon: Hammer, title: t.serviceBuildTitle, description: t.serviceBuildDesc },
+    { icon: Eye, title: t.serviceSupervisionTitle, description: t.serviceSupervisionDesc },
+  ];
+
   return (
     <section id="uslugi" className="section-padding bg-cream">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy font-heading mb-4">
-            Zakres usług
+            {t.servicesTitle}
           </h2>
           <p className="text-steel-light max-w-2xl mx-auto">
-            Oferujemy kompleksową obsługę od projektu po realizację. 
-            Specjalizujemy się w halach stalowych, wiatach, chłodniach i carportach.
+            {t.servicesSubtitle}
           </p>
         </div>
 
