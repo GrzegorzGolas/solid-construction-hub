@@ -1,8 +1,11 @@
 import { Phone, Mail } from "lucide-react";
 import heroHall from "@/assets/hero-hall.jpg";
 import { getPhoneFormatted, getPhoneHref, getEmail, getEmailHref } from "@/lib/contact";
+import { useLang } from "@/lib/i18n";
 
 const Hero = () => {
+  const { t } = useLang();
+
   return (
     <section className="relative min-h-[90vh] flex items-center">
       {/* Background image */}
@@ -22,10 +25,10 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <div className="space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-on-navy leading-tight tracking-tight font-heading">
-              HALE STALOWE • WIATY • CHŁODNIE • CARPORTY
+              {t.heroTitle}
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold tracking-wide">
-              PROJEKTOWANIE • WYKONAWSTWO • NADZÓR
+              {t.heroSubtitle}
             </p>
           </div>
 
@@ -44,12 +47,12 @@ const Hero = () => {
             >
               <Mail className="w-5 h-5 flex-shrink-0" />
               <span className="hidden sm:inline">{getEmail()}</span>
-              <span className="sm:hidden">Napisz do nas</span>
+              <span className="sm:hidden">{t.heroEmailCta}</span>
             </a>
           </div>
 
           <p className="text-cream/70 text-sm pt-4">
-            Skontaktuj się z nami i otrzymaj bezpłatną wycenę
+            {t.heroCta}
           </p>
         </div>
       </div>

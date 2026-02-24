@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 const voivodeships = [
   "Podkarpackie",
@@ -8,15 +9,17 @@ const voivodeships = [
 ];
 
 const Area = () => {
+  const { t } = useLang();
+
   return (
     <section id="obszar" className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy font-heading mb-4">
-            Obszar działalności
+            {t.areaTitle}
           </h2>
           <p className="text-steel-light max-w-2xl mx-auto">
-            Realizujemy inwestycje na terenie południowo-wschodniej Polski.
+            {t.areaSubtitle}
           </p>
         </div>
 
