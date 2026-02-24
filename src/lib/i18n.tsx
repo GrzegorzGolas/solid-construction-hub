@@ -75,7 +75,7 @@ const translations = {
   },
 } as const;
 
-type Translations = typeof translations.pl;
+type Translations = Record<keyof typeof translations.pl, string>;
 
 interface LangContextValue {
   lang: Lang;
