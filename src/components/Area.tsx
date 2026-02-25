@@ -32,12 +32,12 @@ const Area = () => {
           {voivodeships.map(({ name, Map }) => (
             <div
               key={name}
-              className="flex flex-col items-center gap-4 p-6 rounded-xl bg-cream border border-gold/20 hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col items-center gap-2 p-3 pt-4 rounded-xl bg-cream border border-gold/20 hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="w-full h-32">
+              <div className="w-full h-48 sm:h-52">
                 <Map />
               </div>
-              <span className="font-heading font-bold text-navy text-lg text-center">
+              <span className="font-heading font-bold text-navy text-base text-center">
                 {name}
               </span>
             </div>
