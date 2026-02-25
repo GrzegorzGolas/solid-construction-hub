@@ -1,15 +1,20 @@
-import { MapPin } from "lucide-react";
 import { useLang } from "@/lib/i18n";
-
-const voivodeships = [
-  "Podkarpackie",
-  "Lubelskie",
-  "Świętokrzyskie",
-  "Małopolskie",
-];
+import {
+  PodkarpackieMap,
+  LubelskieMap,
+  SwietokrzyskieMap,
+  MalopolskieMap,
+} from "./VoivodeshipMaps";
 
 const Area = () => {
   const { t } = useLang();
+
+  const voivodeships = [
+    { name: t.areaPodkarpackie, Map: PodkarpackieMap },
+    { name: t.areaLubelskie, Map: LubelskieMap },
+    { name: t.areaSwietokrzyskie, Map: SwietokrzyskieMap },
+    { name: t.areaMalopolskie, Map: MalopolskieMap },
+  ];
 
   return (
     <section id="obszar" className="section-padding bg-white">
@@ -23,15 +28,17 @@ const Area = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-          {voivodeships.map((v) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          {voivodeships.map(({ name, Map }) => (
             <div
-              key={v}
-              className="flex flex-col items-center gap-3 p-6 rounded-xl bg-cream border border-gold/20 hover:shadow-lg transition-shadow duration-300"
+              key={name}
+              className="flex flex-col items-center gap-4 p-6 rounded-xl bg-cream border border-gold/20 hover:shadow-lg transition-shadow duration-300"
             >
-              <MapPin className="w-8 h-8 text-gold" />
+              <div className="w-full h-32">
+                <Map />
+              </div>
               <span className="font-heading font-bold text-navy text-lg text-center">
-                {v}
+                {name}
               </span>
             </div>
           ))}
