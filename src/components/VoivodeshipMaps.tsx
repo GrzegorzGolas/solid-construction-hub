@@ -1,7 +1,7 @@
 const cityDot = "fill-gold";
 const cityDotMain = "fill-gold";
-const cityLabel = "fill-navy text-[3px] font-bold";
-const cityLabelSm = "fill-navy text-[2.5px]";
+const cityLabel = "fill-navy text-[4px] font-bold";
+const cityLabelSm = "fill-navy text-[3.2px]";
 
 export const PodkarpackieMap = () => (
   <svg viewBox="0 0 100 80" className="w-full h-full">
