@@ -23,6 +23,10 @@ const translations = {
     // Area
     areaTitle: "Obszar działalności",
     areaSubtitle: "Realizujemy inwestycje na terenie południowo-wschodniej Polski.",
+    areaPodkarpackie: "Podkarpackie",
+    areaLubelskie: "Lubelskie",
+    areaSwietokrzyskie: "Świętokrzyskie",
+    areaMalopolskie: "Małopolskie",
 
     // Contact
     contactTitle: "Skontaktuj się z nami",
@@ -40,7 +44,7 @@ const translations = {
   },
   en: {
     // Hero
-    heroTitle: "STEEL HALLS • CANOPIES • COLD STORES • CARPORTS",
+    heroTitle: "STEEL HALLS • SHELTERS • COLD STORAGE • CARPORTS",
     heroSubtitle: "DESIGN • CONSTRUCTION • SUPERVISION",
     heroEmailCta: "Write to us",
     heroCta: "Contact us for a free quote",
@@ -58,6 +62,10 @@ const translations = {
     // Area
     areaTitle: "Area of operations",
     areaSubtitle: "We carry out projects in south-eastern Poland.",
+    areaPodkarpackie: "Podkarpackie",
+    areaLubelskie: "Lublin",
+    areaSwietokrzyskie: "Świętokrzyskie",
+    areaMalopolskie: "Lesser Poland",
 
     // Contact
     contactTitle: "Get in touch",
