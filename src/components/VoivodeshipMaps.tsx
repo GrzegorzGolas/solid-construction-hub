@@ -192,13 +192,64 @@ const VoivodeshipSVG = ({ coords, cities }: VoivodeshipMapProps) => {
     const points = coords.map(([lon, lat]) => `${toX(lon).toFixed(1)},${toY(lat).toFixed(1)}`);
     const pathD = `M ${points.join(" L ")} Z`;
 
-    // Map cities
+    // Map cities with label collision avoidance
     const mapped = cities.map(([name, lon, lat, isCapital]) => ({
       name,
       x: toX(lon),
       y: toY(lat),
       isCapital,
+      labelX: toX(lon),
+      labelY: toY(lat) - (isCapital ? 7 : 5),
+      anchor: "middle" as "middle" | "start" | "end",
     }));
+
+    // Sort: capitals first so they get priority placement
+    mapped.sort((a, b) => (b.isCapital ? 1 : 0) - (a.isCapital ? 1 : 0));
+
+    // Simple collision resolution
+    const labelH = 6;
+    const charW = 3.2;
+    
+    const getRect = (c: typeof mapped[0]) => {
+      const w = c.name.length * charW * (c.isCapital ? 1.2 : 1);
+      let left = c.labelX - w / 2;
+      if (c.anchor === "start") left = c.labelX;
+      if (c.anchor === "end") left = c.labelX - w;
+      return { left, right: left + w, top: c.labelY - labelH, bottom: c.labelY };
+    };
+
+    const overlaps = (a: ReturnType<typeof getRect>, b: ReturnType<typeof getRect>) =>
+      a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+
+    // Try different positions for each label to avoid overlaps
+    for (let i = 0; i < mapped.length; i++) {
+      const ci = mapped[i];
+      const offsets = [
+        { dy: -(ci.isCapital ? 7 : 5), anchor: "middle" as const },
+        { dy: (ci.isCapital ? 12 : 10), anchor: "middle" as const },
+        { dy: -1, anchor: "start" as const },
+        { dy: -1, anchor: "end" as const },
+        { dy: -(ci.isCapital ? 11 : 9), anchor: "start" as const },
+        { dy: -(ci.isCapital ? 11 : 9), anchor: "end" as const },
+        { dy: (ci.isCapital ? 12 : 10), anchor: "start" as const },
+        { dy: (ci.isCapital ? 12 : 10), anchor: "end" as const },
+      ];
+
+      for (const off of offsets) {
+        ci.labelY = ci.y + off.dy;
+        ci.labelX = ci.x + (off.anchor === "start" ? 4 : off.anchor === "end" ? -4 : 0);
+        ci.anchor = off.anchor;
+        const rect = getRect(ci);
+        let hasCollision = false;
+        for (let j = 0; j < i; j++) {
+          if (overlaps(rect, getRect(mapped[j]))) {
+            hasCollision = true;
+            break;
+          }
+        }
+        if (!hasCollision) break;
+      }
+    }
 
     return {
       path: pathD,
