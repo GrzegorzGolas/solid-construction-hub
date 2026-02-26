@@ -182,11 +182,22 @@ const VoivodeshipSVG = ({ coords, cities }: VoivodeshipMapProps) => {
     minLat -= latRange * padding;
     maxLat += latRange * padding;
 
-    const width = 200;
-    const height = 200 * ((maxLat - minLat) / (maxLon - minLon));
+    // Apply Mercator-like correction for Polish latitudes (~50°N)
+    const midLat = (minLat + maxLat) / 2;
+    const cosLat = Math.cos((midLat * Math.PI) / 180);
+    const correctedLonRange = (maxLon - minLon) * cosLat;
+    const correctedLatRange = maxLat - minLat;
 
-    const toX = (lon: number) => ((lon - minLon) / (maxLon - minLon)) * width;
-    const toY = (lat: number) => ((maxLat - lat) / (maxLat - minLat)) * height;
+    const size = 200;
+    const width = correctedLonRange >= correctedLatRange
+      ? size
+      : size * (correctedLonRange / correctedLatRange);
+    const height = correctedLatRange >= correctedLonRange
+      ? size
+      : size * (correctedLatRange / correctedLonRange);
+
+    const toX = (lon: number) => ((lon - minLon) * cosLat / correctedLonRange) * width;
+    const toY = (lat: number) => ((maxLat - lat) / correctedLatRange) * height;
 
     // Build path - sample every 2nd point for smoothness
     const points = coords.map(([lon, lat]) => `${toX(lon).toFixed(1)},${toY(lat).toFixed(1)}`);
