@@ -268,7 +268,7 @@ const VoivodeshipSVG = ({ coords, cities }: VoivodeshipMapProps) => {
         strokeLinejoin="round"
       />
       {/* Cities */}
-      {cityPositions.map(({ name, x, y, isCapital }) => (
+      {cityPositions.map(({ name, x, y, isCapital, labelX, labelY, anchor }) => (
         <g key={name}>
           <circle
             cx={x}
@@ -279,9 +279,9 @@ const VoivodeshipSVG = ({ coords, cities }: VoivodeshipMapProps) => {
             strokeWidth={isCapital ? 1 : 0.5}
           />
           <text
-            x={x}
-            y={y - (isCapital ? 7 : 5)}
-            textAnchor="middle"
+            x={labelX}
+            y={labelY}
+            textAnchor={anchor}
             className="fill-navy"
             style={{ fontSize: isCapital ? "7px" : "5.5px", fontWeight: isCapital ? 700 : 500, fontFamily: "Montserrat, sans-serif" }}
           >
