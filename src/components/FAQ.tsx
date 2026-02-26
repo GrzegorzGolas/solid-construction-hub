@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     q: "Jakie warianty oferty proponujecie?",
-    a: "Oferujemy trzy warianty: samą konstrukcję stalową, konstrukcję z obudową lub realizację kompleksową „pod klucz" obejmującą dokumentację, fundamenty, konstrukcję, obudowę i montaż.",
+    a: 'Oferujemy trzy warianty: samą konstrukcję stalową, konstrukcję z obudową lub realizację kompleksową „pod klucz" obejmującą dokumentację, fundamenty, konstrukcję, obudowę i montaż.',
   },
 ];
 
