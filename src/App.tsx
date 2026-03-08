@@ -20,25 +20,27 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/hale-magazynowe" element={<HaleMagazynowe />} />
-          <Route path="/hale-produkcyjne" element={<HaleProdukcyjne />} />
-          <Route path="/hale-rolnicze" element={<HaleRolnicze />} />
-          <Route path="/wiaty-stalowe" element={<WiatyStalowe />} />
-          <Route path="/chlodnie" element={<Chlodnie />} />
-          <Route path="/carporty" element={<Carporty />} />
-          <Route path="/dokumentacja" element={<Dokumentacja />} />
-          <Route path="/dziekujemy" element={<ThankYou />} />
-          <Route path="/prywatnosc" element={<Prywatnosc />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <LangProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/hale-magazynowe" element={<HaleMagazynowe />} />
+            <Route path="/hale-produkcyjne" element={<HaleProdukcyjne />} />
+            <Route path="/hale-rolnicze" element={<HaleRolnicze />} />
+            <Route path="/wiaty-stalowe" element={<WiatyStalowe />} />
+            <Route path="/chlodnie" element={<Chlodnie />} />
+            <Route path="/carporty" element={<Carporty />} />
+            <Route path="/dokumentacja" element={<Dokumentacja />} />
+            <Route path="/dziekujemy" element={<ThankYou />} />
+            <Route path="/prywatnosc" element={<Prywatnosc />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </LangProvider>
   </QueryClientProvider>
 );
 
