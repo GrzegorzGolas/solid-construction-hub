@@ -4,7 +4,6 @@ import {
   LubelskieMap,
   SwietokrzyskieMap,
   MalopolskieMap,
-  MazowieckieMap,
 } from "./VoivodeshipMaps";
 
 const Area = () => {
@@ -15,7 +14,6 @@ const Area = () => {
     { name: "Lubelskie", Map: LubelskieMap },
     { name: "Świętokrzyskie", Map: SwietokrzyskieMap },
     { name: "Małopolskie", Map: MalopolskieMap },
-    { name: "Mazowieckie", Map: MazowieckieMap },
   ];
 
   return (
