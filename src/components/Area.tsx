@@ -24,7 +24,7 @@ const Area = () => {
             Obszar działalności
           </h2>
           <p className="text-steel-light max-w-2xl mx-auto">
-            Realizujemy inwestycje na terenie 5 województw w centralnej i południowo-wschodniej Polsce.
+            Realizujemy inwestycje na terenie 4 województw w południowo-wschodniej Polsce.
           </p>
         </div>
 
