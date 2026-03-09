@@ -4,7 +4,7 @@ const steps = [
   { icon: Search, title: "Analiza potrzeb", desc: "Szczegółowe rozpoznanie wymagań inwestora i warunków lokalizacji." },
   { icon: Calculator, title: "Wstępna wycena", desc: "Szybka, bezpłatna wycena na podstawie zebranych informacji." },
   { icon: FileText, title: "Dokumentacja", desc: "Projekt architektoniczny i techniczny dostosowany do obiektu." },
-  { icon: Wrench, title: "Produkcja konstrukcji", desc: "Wykonanie elementów stalowych zgodnie z dokumentacją." },
+  { icon: Wrench, title: "Dostawa konstrukcji i materiałów", desc: "Dostarczamy konstrukcje stalowe oraz materiały do montażu obudowy." },
   { icon: HardHat, title: "Montaż", desc: "Profesjonalny montaż przez własne ekipy na terenie inwestycji." },
   { icon: ShieldCheck, title: "Odbiór i gwarancja", desc: "Kontrola jakości, protokół odbioru i wieloletnia gwarancja." },
 ];

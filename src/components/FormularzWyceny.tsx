@@ -172,7 +172,7 @@ const FormularzWyceny = () => {
                   <SelectValue placeholder="Wybierz" />
                 </SelectTrigger>
                 <SelectContent>
-                  {["podkarpackie", "lubelskie", "małopolskie", "świętokrzyskie", "mazowieckie"].map((w) => (
+                  {["podkarpackie", "lubelskie", "małopolskie", "świętokrzyskie"].map((w) => (
                     <SelectItem key={w} value={w}>{w}</SelectItem>
                   ))}
                 </SelectContent>
