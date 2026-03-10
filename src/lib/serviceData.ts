@@ -146,7 +146,7 @@ export const services: ServiceData[] = [
       { q: "Czy carport wymaga fundamentów?", a: "Zazwyczaj wystarczą punktowe stopy fundamentowe lub kotwy chemiczne." },
       { q: "Jaki jest czas realizacji?", a: "Carport standardowy realizujemy w 2-4 tygodnie." },
       { q: "Czy można dobrać kolor konstrukcji?", a: "Konstrukcje są ocynkowane. Za dodatkową opłatą możemy je pomalować natryskowo lub proszkowo w dowolnym kolorze RAL." },
-      { q: "Czy carport wymaga pozwolenia?", a: "Carporty do 50 m² zazwyczaj wymagają jedynie zgłoszenia budowlanego." },
+      { q: "Czy carport wymaga pozwolenia?", a: "Carporty do 35 m² zazwyczaj wymagają jedynie zgłoszenia budowlanego." },
     ],
   },
   {
