@@ -145,7 +145,7 @@ export const services: ServiceData[] = [
       { q: "Na ile pojazdów można zbudować carport?", a: "Projektujemy carporty od 1 do kilkudziesięciu stanowisk." },
       { q: "Czy carport wymaga fundamentów?", a: "Zazwyczaj wystarczą punktowe stopy fundamentowe lub kotwy chemiczne." },
       { q: "Jaki jest czas realizacji?", a: "Carport standardowy realizujemy w 2-4 tygodnie." },
-      { q: "Czy można dobrać kolor konstrukcji?", a: "Tak, konstrukcja może być malowana proszkowa w dowolnym kolorze RAL." },
+      { q: "Czy można dobrać kolor konstrukcji?", a: "Konstrukcje są ocynkowane. Za dodatkową opłatą możemy je pomalować natryskowo lub proszkowo w dowolnym kolorze RAL." },
       { q: "Czy carport wymaga pozwolenia?", a: "Carporty do 50 m² zazwyczaj wymagają jedynie zgłoszenia budowlanego." },
     ],
   },
