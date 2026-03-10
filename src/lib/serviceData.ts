@@ -96,7 +96,7 @@ export const services: ServiceData[] = [
       "Montaż na przygotowanych fundamentach",
     ],
     faq: [
-      { q: "Czy wiata wymaga pozwolenia na budowę?", a: "Wiaty do 50 m² zazwyczaj wymagają jedynie zgłoszenia. Większe – pozwolenia na budowę." },
+      { q: "Czy wiata wymaga pozwolenia na budowę?", a: "Wiaty do 35 m² zazwyczaj wymagają jedynie zgłoszenia. Większe – pozwolenia na budowę." },
       { q: "Jaki jest czas montażu wiaty?", a: "Montaż standardowej wiaty trwa 3-7 dni roboczych." },
       { q: "Jakie jest pokrycie dachowe?", a: "Najczęściej stosujemy blachę trapezową T-35 lub poliwęglan komorowy." },
       { q: "Czy wiatę można dostawić do istniejącego budynku?", a: "Tak, projektujemy wiaty dostawne z odpowiednim połączeniem do ściany istniejącego obiektu." },
