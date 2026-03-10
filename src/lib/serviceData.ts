@@ -96,7 +96,7 @@ export const services: ServiceData[] = [
       "Montaż na przygotowanych fundamentach",
     ],
     faq: [
-      { q: "Czy wiata wymaga pozwolenia na budowę?", a: "Wiaty do 50 m² zazwyczaj wymagają jedynie zgłoszenia. Większe – pozwolenia na budowę." },
+      { q: "Czy wiata wymaga pozwolenia na budowę?", a: "Wiaty do 35 m² zazwyczaj wymagają jedynie zgłoszenia. Większe – pozwolenia na budowę." },
       { q: "Jaki jest czas montażu wiaty?", a: "Montaż standardowej wiaty trwa 3-7 dni roboczych." },
       { q: "Jakie jest pokrycie dachowe?", a: "Najczęściej stosujemy blachę trapezową T-35 lub poliwęglan komorowy." },
       { q: "Czy wiatę można dostawić do istniejącego budynku?", a: "Tak, projektujemy wiaty dostawne z odpowiednim połączeniem do ściany istniejącego obiektu." },
@@ -145,8 +145,8 @@ export const services: ServiceData[] = [
       { q: "Na ile pojazdów można zbudować carport?", a: "Projektujemy carporty od 1 do kilkudziesięciu stanowisk." },
       { q: "Czy carport wymaga fundamentów?", a: "Zazwyczaj wystarczą punktowe stopy fundamentowe lub kotwy chemiczne." },
       { q: "Jaki jest czas realizacji?", a: "Carport standardowy realizujemy w 2-4 tygodnie." },
-      { q: "Czy można dobrać kolor konstrukcji?", a: "Tak, konstrukcja może być malowana proszkowa w dowolnym kolorze RAL." },
-      { q: "Czy carport wymaga pozwolenia?", a: "Carporty do 50 m² zazwyczaj wymagają jedynie zgłoszenia budowlanego." },
+      { q: "Czy można dobrać kolor konstrukcji?", a: "Konstrukcje są ocynkowane. Za dodatkową opłatą możemy je pomalować natryskowo lub proszkowo w dowolnym kolorze RAL." },
+      { q: "Czy carport wymaga pozwolenia?", a: "Carporty do 35 m² zazwyczaj wymagają jedynie zgłoszenia budowlanego." },
     ],
   },
   {
